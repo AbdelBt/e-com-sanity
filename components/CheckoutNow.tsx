@@ -14,8 +14,8 @@ export default function CheckoutNow({
   price_id,
 }: ProductCart) {
   const { checkoutSingleItem } = useShoppingCart();
-  function buyNow(priceId : string) {
-    checkoutSingleItem(priceId)
+  function buyNow(priceId: string) {
+    checkoutSingleItem(priceId);
   }
   const product = {
     name: name,
@@ -25,7 +25,14 @@ export default function CheckoutNow({
     image: urlFor(image).url(),
     price_id: price_id,
   };
-  return <Button onClick={() => {
-    buyNow(product.price_id)
-  }}>Ajouter au panier</Button>;
+  return (
+    <Button
+    variant="outline"
+      onClick={() => {
+        buyNow(product.price_id);
+      }}
+    >
+      Procéder au paiement
+    </Button>
+  );
 }
