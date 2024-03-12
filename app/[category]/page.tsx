@@ -1,4 +1,3 @@
-import category from "@/e-commerce/schemaTypes/category";
 import { client } from "../lib/sanity";
 import { simplifiedProduct } from "../interface";
 import Link from "next/link";
