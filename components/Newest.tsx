@@ -41,8 +41,8 @@ export default async function Newest() {
                   src={product.imageUrl}
                   alt="product Image"
                   className="w-full h-full object-cover object-center lg:h-full lg:w-full"
-                  width={500}
-                  height={500}
+                  width={800}
+                  height={800}
                 />
               </div>
               <div className="flex justify-between mt-4">

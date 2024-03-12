@@ -38,8 +38,8 @@ export default async function All(){
                     src={product.imageUrl}
                     alt="product Image"
                     className="w-full h-full object-cover object-center lg:h-full lg:w-full"
-                    width={300}
-                    height={300}
+                    width={800}
+                    height={800}
                   />
                 </div>
                 <div className="flex justify-between mt-4">

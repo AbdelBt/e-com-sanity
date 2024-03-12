@@ -32,8 +32,8 @@ export default function ImageGallery({images}: iAppProps){
             <div className="relative overflow-hidden rounded-lg bg-gray-100 lg:col-span-4">
             <Image 
                         src={urlFor(bigImage).url()}
-                        width={500}
-                        height={500}
+                        width={800}
+                        height={800}
                         alt="photo"
                         className="h-full w-full object-cover object-center"
                         />
