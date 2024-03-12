@@ -28,7 +28,6 @@ export default async function Newest() {
           </h2>
           <Link className="flex text-primary items-center gap-x-1" href="/tous">
           Voir Tous{" "}
-            Voir Tous{" "}
             <span>
               <ArrowRight />
             </span>
