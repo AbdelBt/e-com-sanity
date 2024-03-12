@@ -1,6 +1,7 @@
 import { fullProduct } from "@/app/interface";
 import { client } from "@/app/lib/sanity";
 import AddToBag from "@/components/AddToBag";
+import CheckoutNow from "@/components/CheckoutNow";
 import ImageGallery from "@/components/ImageGallery";
 import { Button } from "@/components/ui/button";
 import { Star, Truck } from "lucide-react";
@@ -20,6 +21,8 @@ async function getData(slug: string) {
   const data = await client.fetch(query);
   return data;
 }
+export const dynamic = 'force-dynamic'
+
 export default async function productPage({
   params,
 }: {
@@ -71,7 +74,7 @@ export default async function productPage({
             </div>
             <div className="flex gap-2.5">
               <AddToBag
-                currency="USD"
+                currency="EUR"
                 description={data.description}
                 image={data.images[0]}
                 price={data.price}
@@ -79,7 +82,15 @@ export default async function productPage({
                 key={data._id}
                 price_id={data.price_id}
               />
-              <Button variant={"secondary"}>Procéder au paiement</Button>
+              <CheckoutNow
+                currency="EUR"
+                description={data.description}
+                image={data.images[0]}
+                price={data.price}
+                name={data.name}
+                key={data._id}
+                price_id={data.price_id}
+              />
             </div>
             <p className="mt-12 text-base text-gray-500 tracking-wide">
               {data.description}
